@@ -3,8 +3,8 @@ A Couchdb client for Julia
 ---
 # Installation
 ```
-pkg> add https://github.com/setexams/couchdb.jl
-julia> Pkg.add("https://github.com/setexams/couchdb.jl")
+pkg> add https://github.com/setexams/Couchdb.jl
+julia> Pkg.add("https://github.com/setexams/Couchdb.jl")
 ```
 ---
 # Usage
