@@ -42,6 +42,7 @@ julia> Couchdb.all_dbs(conn)
 julia> 
 ```
 Get information about a database
+
 Example
 ```
 julia> Couchdb.db_info(conn, "test")
@@ -60,6 +61,7 @@ Dict{String, Any} with 11 entries:
 
 ```
 create a databse
+
 Example
 ```
 julia> Couchdb.create_Db(conn, "test")
@@ -86,6 +88,7 @@ Dict{String, Any} with 1 entry:
   "ok" => true
 ```
 delete a database
+
 Example 
 ```
 julia> Couchdb.delete_db(conn, "test1")
@@ -111,6 +114,7 @@ Dict{String, Any} with 3 entries:
   "total_rows" => 2
 ```
 get doc from a db
+
 Example
 ```
 julia> Couchdb.get_doc(conn, "test","1")
@@ -147,6 +151,7 @@ bulk get documents
 julia> bulk_get_docs(conn, db, [Dict("id" => "test_id", "_rev"=>"optional_rev"), ...])
 ```
 get a \_rev of a document
+
 Example
 ```
 julia> Couchdb.get_rev(conn, "test","1")
@@ -154,6 +159,7 @@ julia> Couchdb.get_rev(conn, "test","1")
 
 ```
 delete a document
+
 Example
 ```
 julia> Couchdb.delete_doc(conn, "test", "10")
@@ -180,6 +186,7 @@ X-CouchDB-Body-Time: 0
 ```
 create attachment
 the attachment is saved with its extension
+
 Example
 ```
 julia> Couchdb.create_attachment(conn, "test", "1", "test.txt")
@@ -196,6 +203,7 @@ Dict{String, Any} with 3 entries:
 
 ```
 get the attachments of a document
+
 Example
 ```
 julia> Couchdb.get_attachments(conn, "test","1")
@@ -210,6 +218,7 @@ Dict{String, Any} with 7 entries:
 
 ```
 delete an attachmant
+
 Example
 ```
 julia> Couchdb.delete_attachment(conn,"test","1","test.txt")
@@ -220,6 +229,7 @@ Dict{String, Any} with 3 entries:
 
 ```
 get couchdb generated uuids
+
 Example 
 ```
 julia> Couchdb.uuid(conn)
@@ -240,6 +250,7 @@ julia> Couchdb.uuid(conn, 10)
 
 ```
 get a design doc
+
 Example
 ```
 julia> Couchdb.get_design_doc(conn, "test","test")
@@ -267,18 +278,31 @@ note that a design doc can be created by create\_doc/3 and passing "\_design/doc
 invoke a view
 options = Dict(
 "include_docs" => bool,
+
 "descending" => bool,
+
 "endkey" => ,
+
 "endkey_docid" => ,
+
 "reduce" => bool,
+
 "key" => ,
+
 "keys" => [...],
+
 "limit" => int,
+
 "reduce" => bool,
+
 "skip" => int,
+
 "sorted" => bool,
+
 "stable" => bool,
+
 "startkey" => ,
+
 "update" => true, ...
 )
 
@@ -296,8 +320,10 @@ Dict{String, Any} with 3 entries:
   "offset"     => 0
   "total_rows" => 6
 ```
+
 pass keys as an array
 TODO implement multiple queries
+
 Example 
 ```
 Couchdb.invoke_view(conn, "test","test", "test", ["1"],Dict())
@@ -313,18 +339,7 @@ Dict{String, Any} with 3 entries:
   "total_rows" => 6
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-Uninstallation
+# Uninstallation
 ```
 pkg> rm Couchdb
 ```
