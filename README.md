@@ -11,6 +11,8 @@ julia> Pkg.add("https://github.com/setexams/couchdb.jl")
 ---
 Create an instance of the connection struct
 ```
+julia> using Couchdb
+
 julia> conn = Couchdb.CouchdbConn("scheme", "admin", "password", "host", 5984)
 Main.Couchdb.CouchdbConn("http", "admin", "password", "127.0.0.1", 5984)
 
