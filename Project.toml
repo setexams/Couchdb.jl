@@ -1,0 +1,9 @@
+name = "Couchdb"
+uuid = "f7ff6cee-2dce-43aa-8e0a-15ce9ed030be"
+authors = ["Setexams Corporation <lam@setexams.com>"]
+version = "0.1.0"
+
+[deps]
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+Mimetypes = "c9f3788d-5bfe-4671-9989-b23d9a917abd"
