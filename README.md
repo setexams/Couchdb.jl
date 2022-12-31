@@ -29,6 +29,7 @@ Dict{String, Any} with 6 entries:
 
 ```
 Get a list of all databases in the couchdb instance
+
 Example 
 ```
 
