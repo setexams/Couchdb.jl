@@ -263,7 +263,7 @@ Dict{String, Any} with 4 entries:
 ```
 create a design doc, doc is a Dict 
 a design has the following fields
-doc=Dict(
+```doc=Dict(
 "language" => "javascript" | "erlang"
 "validate_doc_update" => "String"
 "autoupdate" => "bool"
@@ -271,40 +271,29 @@ doc=Dict(
 "views" => Dict(...)
 "updates" => Dict(...)
 "filters" => Dict(...)
-)
+)```
 
 note that a design doc can be created by create\_doc/3 and passing "\_design/doc\_id" as doc id
 
 invoke a view
+```
 options = Dict(
 "include_docs" => bool,
-
 "descending" => bool,
-
 "endkey" => ,
-
 "endkey_docid" => ,
-
 "reduce" => bool,
-
 "key" => ,
-
 "keys" => [...],
-
 "limit" => int,
-
 "reduce" => bool,
-
 "skip" => int,
-
 "sorted" => bool,
-
 "stable" => bool,
-
 "startkey" => ,
-
 "update" => true, ...
 )
+```
 
 Example 
 ```
